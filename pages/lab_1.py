@@ -3,7 +3,6 @@ import sys
 from mixins.tabsMixin import tabsMixin
 from widgets.empty import empty
 from widgets.lab_1.wordSwitcher import wordSwitcher
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QTabWidget, QVBoxLayout
 
 class Lab_1(tabsMixin):
   def __init__(self):

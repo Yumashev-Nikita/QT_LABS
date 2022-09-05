@@ -2,24 +2,26 @@ import sys
 
 from mixins.tabsMixin import tabsMixin
 from widgets.empty import empty
+from pages.lab_1 import Lab_1
+from pages.lab_2 import Lab_2
 
-class Lab_2(tabsMixin):
+class Pages(tabsMixin):
   def __init__(self):
     super().__init__([
       {
-        "func": empty(),
-        "name": "Task_1"
+        "func": Lab_1(),
+        "name": "Lab_1"
+      },
+      {
+        "func": Lab_2(),
+        "name": "Lab_2"
       },
       {
         "func": empty(),
-        "name": "Task_2"
-      },
-      {
-        "func": empty(),
-        "name": "Task_3"
+        "name": "Lab_3"
       },
     ])
     self.initUI()
   
   def initUI(self):
-    self.tabs.setGeometry(100, 200, 300, 40)
+    self.tabs.setGeometry(100, 100, 300, 40)
