@@ -2,7 +2,6 @@ from PyQt5.QtWidgets import QWidget,  QTabWidget, QVBoxLayout
 
 class tabsMixin(QWidget):
   def __init__(self, propTabs):
-    print(propTabs)
     super().__init__()
     layout = QVBoxLayout()
     self.setLayout(layout)

@@ -3,6 +3,8 @@ import sys
 from mixins.tabsMixin import tabsMixin
 from widgets.empty import empty
 from widgets.lab_1.wordSwitcher import wordSwitcher
+from widgets.lab_1.evaluator import evaluator
+from widgets.lab_1.checkBoxes import checkBoxes
 
 class Lab_1(tabsMixin):
   def __init__(self):
@@ -12,11 +14,11 @@ class Lab_1(tabsMixin):
         "name": "Task_1"
       },
       {
-        "func": empty(),
+        "func": evaluator(),
         "name": "Task_2"
       },
       {
-        "func": empty(),
+        "func": checkBoxes(),
         "name": "Task_3"
       },
     ])

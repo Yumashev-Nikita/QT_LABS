@@ -6,9 +6,6 @@ class wordSwitcher(QWidget):
     self.initUI()
 
   def initUI(self):
-    self.setGeometry(300, 300, 300, 300)
-    self.setWindowTitle('Перекидыватель слов')
-    
     self.textLeft = QLineEdit(self)
     self.textLeft.setGeometry(10, 10, 100, 20)
   
