@@ -16,5 +16,7 @@ class evaluator(QWidget):
     self.button.setGeometry(115, 10, 50, 20)
     self.button.clicked.connect(self.evaluateInput)
 
+    self.setFixedHeight(30)
+
   def evaluateInput(self):
     self.outputText.setText(str(eval(self.inputText.text())))

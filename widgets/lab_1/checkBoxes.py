@@ -10,22 +10,23 @@ class checkBoxes(QWidget):
 
   def initUI(self):
     self.layout = QFormLayout()
-    self.layout.setVerticalSpacing(30)
 
     self.wordSwitcher = wordSwitcher()
     self.evaluator = evaluator()
 
     self.wordSwitcherSwitch = QCheckBox("Word Switch")
     self.wordSwitcherSwitch.stateChanged.connect(self.toggle)
+    self.wordSwitcherSwitch.setFixedHeight(30)
 
     self.evaluatorSwitch = QCheckBox("Evaluator Switch")
     self.evaluatorSwitch.stateChanged.connect(self.toggle)
+    self.evaluatorSwitch.setFixedHeight(30)
 
-    self.layout.addRow('111', self.wordSwitcherSwitch)
-    self.layout.addRow('111', self.evaluatorSwitch)
+    self.layout.addWidget(self.wordSwitcherSwitch)
+    self.layout.addWidget(self.evaluatorSwitch)
 
-    self.layout.addRow('111', self.wordSwitcher)
-    self.layout.addRow('111', self.evaluator)
+    self.layout.addWidget(self.wordSwitcher)
+    self.layout.addWidget(self.evaluator)
     self.setLayout(self.layout)
 
   def toggle(self):

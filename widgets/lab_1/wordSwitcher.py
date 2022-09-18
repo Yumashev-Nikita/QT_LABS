@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton
+from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton, QHBoxLayout
 
 class wordSwitcher(QWidget):
   def __init__(self):
@@ -15,6 +15,13 @@ class wordSwitcher(QWidget):
     self.button = QPushButton("->", self)
     self.button.setGeometry(115, 10, 50, 20)
     self.button.clicked.connect(self.changeText)
+
+    self.layout = QHBoxLayout()
+    self.layout.addWidget(self.textLeft)
+    self.layout.addWidget(self.button)
+    self.layout.addWidget(self.textRight)
+    
+    self.setFixedHeight(30)
 
   def changeText(self):
     if(self.button.text() == "->"):

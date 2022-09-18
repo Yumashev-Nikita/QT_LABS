@@ -12,7 +12,6 @@ class Window(QWidget):
     self.setLayout(layout)
     self.pages = Pages()
     layout.addWidget(self.pages)
-  
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
