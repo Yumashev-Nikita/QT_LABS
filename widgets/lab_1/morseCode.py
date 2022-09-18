@@ -41,4 +41,4 @@ class morseCode(QWidget):
 
   def morseTranslate(self):
     sender = self.sender()
-    self.outputText.setText(MORSE_CODE_DICT[sender.text()])
+    self.outputText.setText(self.outputText.text() + MORSE_CODE_DICT[sender.text()])
